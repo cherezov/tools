@@ -1,6 +1,3 @@
-"source $VIMRUNTIME/vimrc_example.vim
-"source $VIMRUNTIME/mswin.vim
-
 colorscheme pablo
 
 "set nocompatible
@@ -16,15 +13,13 @@ set history=50 "keep 50 lines of command line history
 set ruler "show cursor position everytime
 set path+=.
 set nobackup
-set backupdir=$VIMRUNTIME/backup
+"set backupdir=$VIMRUNTIME/backup
 set autoindent " auto tab
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set directory=$VIMRUNTIME/temp
 set incsearch
 set hidden " allow to switch buffers without saving
 
-
-cd H:\vim_docs
 
 "Folding
 set foldtext=getline(v:foldstart).'...[+'.(v:foldend-v:foldstart).'lines]...'
@@ -89,8 +84,8 @@ map <C-V> "+gP
 
 "Consolas font:
 "http://www.microsoft.com/downloads/details.aspx?familyid=22e69ae4-7e40-4807-8a86-b3d36fab68d3&displaylang=en 
-set guifont=Consolas:h10:cRUSSIAN
-autocmd BufEnter *.txt set guifont=Courier\ New:h10:cRUSSIAN
+"set guifont=Consolas:h10:cRUSSIAN
+"autocmd BufEnter *.txt set guifont=Courier\ New:h10:cRUSSIAN
 
 highlight Folded term=standout ctermfg=11 ctermbg=8 guifg=Black guibg=DarkGrey
 highlight FoldColumn guibg=Black guifg=Yellow 
@@ -163,5 +158,3 @@ function SwitchHighlight()
     exe "set invhlsearch"
     exe "match"
 endfunction
-
-"exe 'call ShowLongLines(100)'
