@@ -12,11 +12,8 @@ set wildmode=list:longest
 set history=50 "keep 50 lines of command line history
 set ruler "show cursor position everytime
 set path+=.
-set nobackup
-"set backupdir=$VIMRUNTIME/backup
 set autoindent " auto tab
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set directory=$VIMRUNTIME/temp
 set incsearch
 set hidden " allow to switch buffers without saving
 
@@ -52,7 +49,7 @@ cmap <F2> <Esc>:w<CR>
 nmap <F3> <Esc>:copen<CR>
 
 "F5 is diff between backup and current version of file
-nmap <F5> <Esc>:vert diffsplit expand("%:p").'~'
+nmap <F5> <Esc>:call ()<CR>
 
 "F7 is making tags for current file folder
 nmap <F7> <Esc>:call MakeTags()<CR>
