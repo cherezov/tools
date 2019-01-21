@@ -21,7 +21,11 @@ RUN yum -y install boost-devel
 RUN yum -y install gtest-devel
 RUN yum -y install gmock-devel
  
+RUN dbus-uuidgen > /etc/machine-id
+
 RUN yum -y install lm_sensors
 RUN yum -y install gettext
 RUN wget -P /tmp http://pagesperso-orange.fr/sebastien.godard/sysstat-12.1.1-1.x86_64.rpm 
 RUN rpm -Uvh /tmp/sysstat-12.1.1-1.x86_64.rpm
+
+ENV PS1="[\u@docker \W]# "
